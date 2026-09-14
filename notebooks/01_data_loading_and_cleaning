@@ -1,0 +1,18 @@
+# 01 - Data Loading and Cleaning
+
+## Hybrid Attention-Based Deep Learning Framework for Software Reliability Prediction
+
+### Objective
+
+This notebook loads and inspects the NASA PROMISE KC1 software
+defect dataset and performs the initial data-quality assessment.
+
+### Tasks
+
+- Load the KC1 dataset
+- Inspect dimensions and data types
+- Identify missing values
+- Identify duplicate records
+- Inspect the target variable
+- Detect inconsistent feature representations
+- Produce a clean dataset for subsequent preprocessing
