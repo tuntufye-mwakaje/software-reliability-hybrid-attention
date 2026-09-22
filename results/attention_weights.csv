@@ -1,0 +1,17 @@
+source_group,target_group,attention_weight
+Size,Size,0.21496796607971191
+Size,Complexity,0.2102263867855072
+Size,Halstead,0.34064343571662903
+Size,Operators / Operands,0.23416222631931305
+Complexity,Size,0.21620993316173553
+Complexity,Complexity,0.20559701323509216
+Complexity,Halstead,0.34523048996925354
+Complexity,Operators / Operands,0.2329624593257904
+Halstead,Size,0.22656892240047455
+Halstead,Complexity,0.2187257558107376
+Halstead,Halstead,0.3137832581996918
+Halstead,Operators / Operands,0.24092236161231995
+Operators / Operands,Size,0.22041365504264832
+Operators / Operands,Complexity,0.20939181745052338
+Operators / Operands,Halstead,0.3408765494823456
+Operators / Operands,Operators / Operands,0.2293180525302887

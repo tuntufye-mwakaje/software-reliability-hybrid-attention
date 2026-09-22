@@ -1,0 +1,2 @@
+model,operating_point,roc_auc,pr_auc,accuracy,precision,recall,f1,true_negatives,false_positives,false_negatives,true_positives,test_samples,defective_test_samples,threshold,validation_f1,validation_precision,validation_recall
+Hybrid Attention,Validation-selected threshold 0.18,0.7966386554621848,0.4221066193201295,0.7488151658767772,0.34814814814814815,0.7230769230769231,0.47,269,88,18,47,422,65,0.17999999999999997,0.47126436781609193,0.3360655737704918,0.7884615384615384
