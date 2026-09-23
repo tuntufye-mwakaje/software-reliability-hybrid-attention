@@ -1,0 +1,65 @@
+{
+  "experiment": "four_variant_repeated_seed_ablation",
+  "input_file": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_repeated_seed_results.csv",
+  "output_file": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_repeated_seed_aggregate.csv",
+  "aggregation": "mean_and_sample_standard_deviation_across_training_seeds",
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split_seed": 42,
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "variants": [
+    "A0_full_hybrid_attention",
+    "A1_no_self_attention",
+    "A2_no_semantic_tokenization",
+    "A3_single_head_attention"
+  ],
+  "number_of_runs": 100,
+  "runs_per_variant_dataset": 5,
+  "metrics": [
+    "roc_auc",
+    "pr_auc",
+    "accuracy",
+    "precision",
+    "recall",
+    "f1"
+  ],
+  "standard_deviation": "sample_standard_deviation_ddof_1",
+  "frozen_partitions": {
+    "CM1": [
+      309,
+      84,
+      105
+    ],
+    "JM1": [
+      8491,
+      2190,
+      2523
+    ],
+    "KC1": [
+      1370,
+      307,
+      432
+    ],
+    "KC2": [
+      346,
+      66,
+      110
+    ],
+    "PC1": [
+      722,
+      171,
+      216
+    ]
+  }
+}

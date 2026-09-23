@@ -1,0 +1,31 @@
+{
+  "experiment": "hybrid_attention_seed42_threshold_analysis",
+  "seed": 42,
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "threshold_grid": {
+    "start": 0.001,
+    "stop": 0.999,
+    "step": 0.001
+  },
+  "threshold_selection_data": "validation_only",
+  "test_data_used_for_threshold_selection": false,
+  "test_evaluation": "locked_after_validation_threshold_selection",
+  "selection_criteria": [
+    "max_f1",
+    "max_balanced_accuracy",
+    "max_youden_j"
+  ],
+  "reference_condition": {
+    "threshold": 0.5,
+    "description": "fixed_0.5_reference"
+  },
+  "model_checkpoint": "seed42_best_checkpoint",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling": "fit_train_only"
+}

@@ -1,0 +1,19 @@
+{
+  "experiment": "hybrid_attention_seed42_fixed_0.5_reference",
+  "seed": 42,
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "threshold": 0.5,
+  "threshold_selection": "not_applicable_fixed_reference",
+  "validation_data_used_for_threshold_selection": false,
+  "test_data_used_for_threshold_selection": false,
+  "test_evaluation": "locked_evaluation_at_fixed_threshold_0.5",
+  "model_checkpoint": "seed42_best_checkpoint",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling": "fit_train_only"
+}

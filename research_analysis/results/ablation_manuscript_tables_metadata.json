@@ -1,0 +1,45 @@
+{
+  "analysis": "manuscript_ready_ablation_table_preparation",
+  "reference_variant": "A0_full_hybrid_attention",
+  "ablations": [
+    "A1_no_self_attention",
+    "A2_no_semantic_tokenization",
+    "A3_single_head_attention"
+  ],
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split_seed": 42,
+  "primary_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "f1"
+  ],
+  "difference_definition": "ablation minus A0 reference",
+  "classification_threshold": 0.5,
+  "statistical_correction": "Holm correction separately within each metric",
+  "zero_f1_policy": "Retained as observed results; not treated as missing values",
+  "aggregate_format": "wide format with metric-specific mean and SD columns",
+  "source_files": {
+    "aggregate": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_repeated_seed_aggregate.csv",
+    "statistics": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_statistical_comparison.csv",
+    "zero_f1": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_zero_f1_diagnostics.csv"
+  },
+  "output_files": {
+    "primary": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_primary_table.csv",
+    "statistics": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_statistical_table.csv",
+    "zero_f1": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_zero_f1_table.csv",
+    "component_summary": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_component_summary.csv"
+  }
+}

@@ -1,0 +1,61 @@
+dataset,metric,metric_label,variant,variant_label,mean,sd,mean_sd
+CM1,f1,F1,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.116484,0.065290,0.116484 ± 0.065290
+CM1,f1,F1,A1_no_self_attention,A1 No Self-Attention,0.000000,0.000000,0.000000 ± 0.000000
+CM1,f1,F1,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.000000,0.000000,0.000000 ± 0.000000
+CM1,f1,F1,A3_single_head_attention,A3 Single-Head Attention,0.110769,0.113146,0.110769 ± 0.113146
+CM1,pr_auc,PR-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.262808,0.013786,0.262808 ± 0.013786
+CM1,pr_auc,PR-AUC,A1_no_self_attention,A1 No Self-Attention,0.213672,0.027046,0.213672 ± 0.027046
+CM1,pr_auc,PR-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.303930,0.014223,0.303930 ± 0.014223
+CM1,pr_auc,PR-AUC,A3_single_head_attention,A3 Single-Head Attention,0.253821,0.022982,0.253821 ± 0.022982
+CM1,roc_auc,ROC-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.798737,0.013029,0.798737 ± 0.013029
+CM1,roc_auc,ROC-AUC,A1_no_self_attention,A1 No Self-Attention,0.702947,0.041358,0.702947 ± 0.041358
+CM1,roc_auc,ROC-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.828632,0.009630,0.828632 ± 0.009630
+CM1,roc_auc,ROC-AUC,A3_single_head_attention,A3 Single-Head Attention,0.779158,0.015779,0.779158 ± 0.015779
+JM1,f1,F1,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.167726,0.030680,0.167726 ± 0.030680
+JM1,f1,F1,A1_no_self_attention,A1 No Self-Attention,0.159953,0.028855,0.159953 ± 0.028855
+JM1,f1,F1,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.140633,0.017384,0.140633 ± 0.017384
+JM1,f1,F1,A3_single_head_attention,A3 Single-Head Attention,0.172482,0.033852,0.172482 ± 0.033852
+JM1,pr_auc,PR-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.379235,0.003556,0.379235 ± 0.003556
+JM1,pr_auc,PR-AUC,A1_no_self_attention,A1 No Self-Attention,0.376977,0.005255,0.376977 ± 0.005255
+JM1,pr_auc,PR-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.364944,0.003811,0.364944 ± 0.003811
+JM1,pr_auc,PR-AUC,A3_single_head_attention,A3 Single-Head Attention,0.378616,0.005464,0.378616 ± 0.005464
+JM1,roc_auc,ROC-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.722110,0.002623,0.722110 ± 0.002623
+JM1,roc_auc,ROC-AUC,A1_no_self_attention,A1 No Self-Attention,0.720294,0.001875,0.720294 ± 0.001875
+JM1,roc_auc,ROC-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.718501,0.002592,0.718501 ± 0.002592
+JM1,roc_auc,ROC-AUC,A3_single_head_attention,A3 Single-Head Attention,0.722046,0.003650,0.722046 ± 0.003650
+KC1,f1,F1,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.153403,0.023309,0.153403 ± 0.023309
+KC1,f1,F1,A1_no_self_attention,A1 No Self-Attention,0.173982,0.027400,0.173982 ± 0.027400
+KC1,f1,F1,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.224908,0.047320,0.224908 ± 0.047320
+KC1,f1,F1,A3_single_head_attention,A3 Single-Head Attention,0.164478,0.012308,0.164478 ± 0.012308
+KC1,pr_auc,PR-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.358578,0.002496,0.358578 ± 0.002496
+KC1,pr_auc,PR-AUC,A1_no_self_attention,A1 No Self-Attention,0.356667,0.005710,0.356667 ± 0.005710
+KC1,pr_auc,PR-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.372446,0.020780,0.372446 ± 0.020780
+KC1,pr_auc,PR-AUC,A3_single_head_attention,A3 Single-Head Attention,0.351344,0.014742,0.351344 ± 0.014742
+KC1,roc_auc,ROC-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.761043,0.008901,0.761043 ± 0.008901
+KC1,roc_auc,ROC-AUC,A1_no_self_attention,A1 No Self-Attention,0.756046,0.005014,0.756046 ± 0.005014
+KC1,roc_auc,ROC-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.777342,0.009784,0.777342 ± 0.009784
+KC1,roc_auc,ROC-AUC,A3_single_head_attention,A3 Single-Head Attention,0.755715,0.009728,0.755715 ± 0.009728
+KC2,f1,F1,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.444191,0.025074,0.444191 ± 0.025074
+KC2,f1,F1,A1_no_self_attention,A1 No Self-Attention,0.383035,0.025452,0.383035 ± 0.025452
+KC2,f1,F1,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.446156,0.012993,0.446156 ± 0.012993
+KC2,f1,F1,A3_single_head_attention,A3 Single-Head Attention,0.377929,0.044250,0.377929 ± 0.044250
+KC2,pr_auc,PR-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.581355,0.010451,0.581355 ± 0.010451
+KC2,pr_auc,PR-AUC,A1_no_self_attention,A1 No Self-Attention,0.584697,0.005731,0.584697 ± 0.005731
+KC2,pr_auc,PR-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.605465,0.024420,0.605465 ± 0.024420
+KC2,pr_auc,PR-AUC,A3_single_head_attention,A3 Single-Head Attention,0.579213,0.011187,0.579213 ± 0.011187
+KC2,roc_auc,ROC-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.823114,0.006871,0.823114 ± 0.006871
+KC2,roc_auc,ROC-AUC,A1_no_self_attention,A1 No Self-Attention,0.822793,0.004203,0.822793 ± 0.004203
+KC2,roc_auc,ROC-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.827929,0.010439,0.827929 ± 0.010439
+KC2,roc_auc,ROC-AUC,A3_single_head_attention,A3 Single-Head Attention,0.816105,0.008564,0.816105 ± 0.008564
+PC1,f1,F1,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.021053,0.047075,0.021053 ± 0.047075
+PC1,f1,F1,A1_no_self_attention,A1 No Self-Attention,0.000000,0.000000,0.000000 ± 0.000000
+PC1,f1,F1,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.000000,0.000000,0.000000 ± 0.000000
+PC1,f1,F1,A3_single_head_attention,A3 Single-Head Attention,0.000000,0.000000,0.000000 ± 0.000000
+PC1,pr_auc,PR-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.239909,0.007416,0.239909 ± 0.007416
+PC1,pr_auc,PR-AUC,A1_no_self_attention,A1 No Self-Attention,0.215603,0.021215,0.215603 ± 0.021215
+PC1,pr_auc,PR-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.214376,0.045330,0.214376 ± 0.045330
+PC1,pr_auc,PR-AUC,A3_single_head_attention,A3 Single-Head Attention,0.243499,0.016828,0.243499 ± 0.016828
+PC1,roc_auc,ROC-AUC,A0_full_hybrid_attention,A0 Full Hybrid Attention,0.688636,0.003494,0.688636 ± 0.003494
+PC1,roc_auc,ROC-AUC,A1_no_self_attention,A1 No Self-Attention,0.671324,0.023348,0.671324 ± 0.023348
+PC1,roc_auc,ROC-AUC,A2_no_semantic_tokenization,A2 No Semantic Tokenization,0.695903,0.014172,0.695903 ± 0.014172
+PC1,roc_auc,ROC-AUC,A3_single_head_attention,A3 Single-Head Attention,0.686504,0.007837,0.686504 ± 0.007837

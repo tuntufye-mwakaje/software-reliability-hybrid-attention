@@ -1,0 +1,54 @@
+{
+  "experiment": "hybrid_attention_vs_classical_baselines",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "models": [
+    "hybrid_attention",
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "proposed_model": "hybrid_attention",
+  "baseline_models": [
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_training_seeds": 5,
+  "split_seed": 42,
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling_protocol": "fit_train_only",
+  "test_usage": "final_evaluation_only",
+  "comparison_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "accuracy",
+    "precision",
+    "recall",
+    "f1"
+  ],
+  "hybrid_attention_input": "semantic feature-group tokens with 4 groups padded to width 8",
+  "baseline_input": "21-dimensional standardized feature vectors",
+  "excluded_metrics": {
+    "balanced_accuracy": "not present in the Hybrid repeated-seed summary",
+    "youden_j": "not present in the Hybrid repeated-seed summary"
+  },
+  "note": "Only metrics available in both source summaries are included. No missing Hybrid Attention metrics are reconstructed or inferred.",
+  "output_rows": 20,
+  "source_files": {
+    "hybrid_attention": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\hybrid_attention_repeated_seed_summary.csv",
+    "baselines": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\baseline_repeated_seed_summary.csv"
+  }
+}

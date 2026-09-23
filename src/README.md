@@ -1,111 +1,46 @@
 # Source Code
 
+This directory contains the validated implementation of the multi-dataset software reliability prediction study.
 
+## Current Study
 
-This directory contains the implementation of the software reliability prediction pipeline.
+The public source implements the experimental methodology used for CM1, JM1, KC1, KC2, and PC1.
 
-
-
-## Module Overview
-
-
+### Core Modules
 
 | Module | Purpose |
-
 |---|---|
+| dataset_schema.py | Defines and validates the canonical 21-feature schema and dataset-specific target normalization |
+| grouped_split.py | Implements grouped, stratified partitioning with predictor-group leakage controls |
+| research_data.py | Loads datasets and validates frozen seed-42 manifests and partitions |
+| research_preprocessing.py | Applies train-only standardization and semantic feature-group tokenization |
+| research_models.py | Defines the Hybrid Attention architecture |
+| research_train.py | Trains the Hybrid Attention model across controlled seeds 42-46 |
+| baseline_experiments.py | Runs Logistic Regression, Random Forest, and MLP baselines using the same partitions |
+| ablation_experiments.py | Runs A0-A3 component ablation experiments |
+| statistical_comparison.py | Performs paired seed-level statistical comparisons and Holm correction |
+| effect_size_confidence_analysis.py | Computes paired effect sizes and confidence intervals |
 
-| `data_loader.py` | Loads and validates the NASA/PROMISE KC1 dataset |
+## Experimental Design
 
-| `preprocessing.py` | Defines feature groups, performs leakage-aware data splitting and training-only scaling, and creates feature-group tokens |
+- Datasets: CM1, JM1, KC1, KC2, PC1
+- Frozen grouped train/validation/test partitions generated with split seed 42
+- Train-only feature standardization
+- 21 standardized predictors organized into four semantic feature groups
+- Hybrid Attention input representation: four semantic tokens with width eight
+- Controlled training seeds: 42, 43, 44, 45, 46
+- Primary metrics: ROC-AUC, PR-AUC, and F1
+- Supplementary metrics: accuracy, precision, and recall
+- Hybrid Attention checkpoint selection uses validation loss before locked final test evaluation
+- Baselines use the same frozen partitions and standardized predictors without validation-based hyperparameter tuning
 
-| `models.py` | Defines the hybrid attention neural network architecture |
+## Ablation Variants
 
-| `train.py` | Trains the hybrid attention model and saves the best checkpoint and training history |
+- A0: Full Hybrid Attention model
+- A1: No self-attention
+- A2: No semantic tokenization
+- A3: Single-head attention
 
-| `evaluate.py` | Evaluates the trained model on the final test set |
+## Reproducibility
 
-| `baseline_models.py` | Trains and evaluates Logistic Regression and Random Forest baseline models |
-
-| `threshold_analysis.py` | Selects a classification threshold using validation data and evaluates the selected threshold on the final test set |
-
-| `attention_analysis.py` | Extracts and analyzes feature-group attention weights |
-
-| `compare_models.py` | Combines model evaluation results for comparison and generates comparison visualizations |
-
-| `plot_evaluation.py` | Generates evaluation plots such as ROC, precision-recall, and confusion-matrix figures |
-
-| `feature_profile.py` | Provides feature-level profiling utilities for the KC1 dataset |
-
-
-
-## Pipeline
-
-
-
-The main experimental workflow is:
-
-
-
-```text
-
-KC1 Dataset
-
-&#x20;   |
-
-&#x20;   v
-
-Data Loading \& Validation
-
-&#x20;   |
-
-&#x20;   v
-
-Train / Validation / Test Split
-
-&#x20;   |
-
-&#x20;   v
-
-Training-only Feature Scaling
-
-&#x20;   |
-
-&#x20;   v
-
-Semantic Feature Groups
-
-&#x20;   |
-
-&#x20;   v
-
-Feature-group Tokens
-
-&#x20;   |
-
-&#x20;   v
-
-Learned Feature Embeddings
-
-&#x20;   |
-
-&#x20;   v
-
-Multi-head Self-Attention
-
-&#x20;   |
-
-&#x20;   v
-
-Classification Head
-
-&#x20;   |
-
-&#x20;   v
-
-Validation-based Threshold Selection
-
-&#x20;   |
-
-&#x20;   v
-
-Final Test Evaluation
+The source code is designed to reproduce the controlled experimental workflow documented in the repository methodology and reproducibility documentation. Raw datasets, frozen manifests, generated checkpoints, and private research outputs are intentionally kept outside the public source tree.

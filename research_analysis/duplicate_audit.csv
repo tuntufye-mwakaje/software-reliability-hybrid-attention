@@ -1,0 +1,6 @@
+dataset,total_rows,unique_feature_rows,duplicate_feature_rows,conflicting_feature_labels,duplicate_exact_rows
+CM1,498,441,57,1,56
+JM1,13204,8820,4384,88,4296
+KC1,2109,1192,917,20,897
+KC2,522,369,153,6,147
+PC1,1109,948,161,6,155

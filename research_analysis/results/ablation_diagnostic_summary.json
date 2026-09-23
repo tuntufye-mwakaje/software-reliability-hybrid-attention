@@ -1,0 +1,60 @@
+{
+  "reference_variant": "A0_full_hybrid_attention",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "ablation_variants": {
+    "A1_no_self_attention": "Self-attention removed",
+    "A2_no_semantic_tokenization": "Semantic tokenization removed",
+    "A3_single_head_attention": "Four heads changed to one head"
+  },
+  "number_of_datasets": 5,
+  "number_of_variants": 4,
+  "zero_f1_rows": 5,
+  "A1_no_self_attention": {
+    "roc_auc_delta_mean_across_datasets": -0.024047200000000025,
+    "roc_auc_delta_sd_across_datasets": 0.040658520665415275,
+    "pr_auc_delta_mean_across_datasets": -0.014853799999999983,
+    "pr_auc_delta_sd_across_datasets": 0.0219195729246717,
+    "f1_delta_mean_across_datasets": -0.03717739999999999,
+    "f1_delta_sd_across_datasets": 0.05320931971280971,
+    "datasets_with_negative_roc_auc_delta": 5,
+    "datasets_with_positive_roc_auc_delta": 0,
+    "datasets_with_negative_pr_auc_delta": 4,
+    "datasets_with_positive_pr_auc_delta": 1,
+    "datasets_with_negative_f1_delta": 4,
+    "datasets_with_positive_f1_delta": 1
+  },
+  "A2_no_semantic_tokenization": {
+    "roc_auc_delta_mean_across_datasets": 0.010933399999999982,
+    "roc_auc_delta_sd_across_datasets": 0.012754319299750985,
+    "pr_auc_delta_mean_across_datasets": 0.007855200000000012,
+    "pr_auc_delta_sd_across_datasets": 0.027442113360672506,
+    "f1_delta_mean_across_datasets": -0.018232,
+    "f1_delta_sd_across_datasets": 0.06745476047693001,
+    "datasets_with_negative_roc_auc_delta": 1,
+    "datasets_with_positive_roc_auc_delta": 4,
+    "datasets_with_negative_pr_auc_delta": 2,
+    "datasets_with_positive_pr_auc_delta": 3,
+    "datasets_with_negative_f1_delta": 3,
+    "datasets_with_positive_f1_delta": 2
+  },
+  "A3_single_head_attention": {
+    "roc_auc_delta_mean_across_datasets": -0.006822400000000029,
+    "roc_auc_delta_sd_across_datasets": 0.007626839404366649,
+    "pr_auc_delta_mean_across_datasets": -0.0030783999999999924,
+    "pr_auc_delta_sd_across_datasets": 0.0050885562097710895,
+    "f1_delta_mean_across_datasets": -0.015439799999999995,
+    "f1_delta_sd_across_datasets": 0.030902591795834856,
+    "datasets_with_negative_roc_auc_delta": 5,
+    "datasets_with_positive_roc_auc_delta": 0,
+    "datasets_with_negative_pr_auc_delta": 4,
+    "datasets_with_positive_pr_auc_delta": 1,
+    "datasets_with_negative_f1_delta": 3,
+    "datasets_with_positive_f1_delta": 2
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "experiment": "four_variant_repeated_seed_ablation",
+  "variants": [
+    "A0_full_hybrid_attention",
+    "A1_no_self_attention",
+    "A2_no_semantic_tokenization",
+    "A3_single_head_attention"
+  ],
+  "variant_definitions": {
+    "A0_full_hybrid_attention": "Full model: semantic tokens + 32-dimensional feature-group embedding + 4-head self-attention + residual/LayerNorm + feed-forward block + mean pooling + classifier.",
+    "A1_no_self_attention": "Semantic tokens + 32-dimensional feature-group embedding + mean pooling + classifier; self-attention block removed.",
+    "A2_no_semantic_tokenization": "Original 21 standardized predictors treated as one vector with a dedicated 21-to-32 projection, LayerNorm, GELU, and matched classifier; semantic tokenization and attention removed.",
+    "A3_single_head_attention": "Same full architecture as A0, but self-attention uses one head instead of four."
+  },
+  "split_seed": 42,
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "total_runs": 100,
+  "batch_size": 32,
+  "epochs": 50,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 10,
+  "lr_reduction_patience": 5,
+  "lr_reduction_factor": 0.5,
+  "gradient_clip_norm": 1.0,
+  "embedding_dim": 32,
+  "full_num_heads": 4,
+  "single_num_heads": 1,
+  "dropout": 0.1,
+  "device": "cpu",
+  "threshold": 0.5,
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling_protocol": "fit_train_only",
+  "training_randomness": "controlled_by_training_seed",
+  "model_initialization": "seed_controlled",
+  "training_dataloader": "shuffle_true_seed_controlled",
+  "validation_dataloader": "shuffle_false",
+  "test_dataloader": "shuffle_false",
+  "model_selection": "minimum_validation_loss",
+  "test_usage": "final_evaluation_only",
+  "a2_input_reconstruction": "Original 21 standardized predictors reconstructed from non-padded positions of the four preprocessing tokens; no new scaling or partitioning.",
+  "parameter_counts": [
+    {
+      "variant": "A0_full_hybrid_attention",
+      "parameter_count": 9985
+    },
+    {
+      "variant": "A1_no_self_attention",
+      "parameter_count": 1441
+    },
+    {
+      "variant": "A2_no_semantic_tokenization",
+      "parameter_count": 1857
+    },
+    {
+      "variant": "A3_single_head_attention",
+      "parameter_count": 9985
+    }
+  ]
+}

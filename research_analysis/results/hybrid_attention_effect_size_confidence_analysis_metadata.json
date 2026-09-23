@@ -1,0 +1,46 @@
+{
+  "experiment": "paired_effect_size_and_confidence_analysis",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "baseline_models": [
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_pairs_per_comparison": 5,
+  "split_seed": 42,
+  "primary_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "f1"
+  ],
+  "supplementary_metrics": [
+    "accuracy",
+    "precision",
+    "recall"
+  ],
+  "paired_difference_definition": "Hybrid Attention minus baseline",
+  "confidence_interval": "95 percent Student-t confidence interval for the mean paired difference",
+  "effect_size_1": "paired Cohen d",
+  "effect_size_2": "paired rank-biserial correlation",
+  "statistical_tests_reused": [
+    "paired Wilcoxon signed-rank test",
+    "exact paired sign-flip permutation test"
+  ],
+  "multiple_comparison_correction": "Holm-Bonferroni adjustment within metric",
+  "test_data_usage": "existing locked test results only; no retraining or test-based model selection",
+  "important_limitation": "Only five paired training seeds are available per comparison; confidence intervals and inferential results should therefore be interpreted conservatively.",
+  "output_rows": 90
+}

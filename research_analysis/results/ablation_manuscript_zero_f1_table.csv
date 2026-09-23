@@ -1,0 +1,6 @@
+variant,dataset,f1_mean,f1_sd,roc_auc_mean,pr_auc_mean,pr_auc_sd
+A1_no_self_attention,CM1,0.000000,0.000000,0.702947,0.213672,0.027046
+A1_no_self_attention,PC1,0.000000,0.000000,0.671324,0.215603,0.021215
+A2_no_semantic_tokenization,CM1,0.000000,0.000000,0.828632,0.303930,0.014223
+A2_no_semantic_tokenization,PC1,0.000000,0.000000,0.695903,0.214376,0.045330
+A3_single_head_attention,PC1,0.000000,0.000000,0.686504,0.243499,0.016828

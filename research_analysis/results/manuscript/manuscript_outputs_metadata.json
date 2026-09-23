@@ -1,0 +1,57 @@
+{
+  "source_files": [
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\hybrid_attention_vs_baselines_summary.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\hybrid_attention_statistical_comparison.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\hybrid_attention_effect_size_confidence_analysis.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_repeated_seed_aggregate.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_statistical_comparison.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_component_summary.csv",
+    "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\ablation_manuscript_zero_f1_table.csv"
+  ],
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "primary_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "f1"
+  ],
+  "supplementary_metrics": [
+    "accuracy",
+    "precision",
+    "recall"
+  ],
+  "baseline_models": [
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "ablation_variants": [
+    "A0_full_hybrid_attention",
+    "A1_no_self_attention",
+    "A2_no_semantic_tokenization",
+    "A3_single_head_attention"
+  ],
+  "output_directory": "D:\\Projects\\software-reliability-hybrid-attention\\research_analysis\\results\\manuscript",
+  "tables": [
+    "table_1_model_performance.csv",
+    "table_2_baseline_statistics.csv",
+    "table_3_baseline_effect_sizes.csv",
+    "table_4_ablation_performance.csv",
+    "table_5_ablation_statistics.csv",
+    "table_6_component_summary.csv",
+    "table_7_zero_f1_diagnostics.csv"
+  ],
+  "figures": [
+    "figure_1_model_performance.png",
+    "figure_2_ablation_roc_auc.png",
+    "figure_3_ablation_pr_auc.png",
+    "figure_4_ablation_f1.png",
+    "figure_5_ablation_deltas.png"
+  ],
+  "methodological_note": "Baseline and ablation inferential comparisons use five paired training seeds (42-46) under the fixed seed-42 dataset partitions. Primary metrics are ROC-AUC, PR-AUC, and F1. Accuracy, precision, and recall are treated as supplementary metrics."
+}

@@ -1,0 +1,84 @@
+{
+  "experiment": "repeated_seed_baseline_comparison",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split_seed": 42,
+  "number_of_datasets": 5,
+  "training_seeds_per_dataset": 5,
+  "models": [
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "total_runs": 75,
+  "runs_per_dataset": 15,
+  "feature_count": 21,
+  "feature_representation": "21 canonical standardized predictors",
+  "feature_columns": [
+    "loc",
+    "v(g)",
+    "ev(g)",
+    "iv(g)",
+    "n",
+    "v",
+    "l",
+    "d",
+    "i",
+    "e",
+    "b",
+    "t",
+    "lOCode",
+    "lOComment",
+    "lOBlank",
+    "locCodeAndComment",
+    "uniq_Op",
+    "uniq_Opnd",
+    "total_Op",
+    "total_Opnd",
+    "branchCount"
+  ],
+  "scaling": "StandardScaler fitted on training partition only",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "threshold": 0.5,
+  "test_usage": "final evaluation only",
+  "hyperparameter_tuning": false,
+  "model_selection": "fixed baseline configurations; no test-set tuning",
+  "logistic_regression": {
+    "max_iter": 2000,
+    "class_weight": null
+  },
+  "random_forest": {
+    "n_estimators": 300,
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "class_weight": null,
+    "n_jobs": -1
+  },
+  "mlp": {
+    "hidden_layer_sizes": [
+      64,
+      32
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.0001,
+    "batch_size": 32,
+    "learning_rate_init": 0.001,
+    "max_iter": 50,
+    "early_stopping": false
+  },
+  "purpose": "Controlled comparison of conventional classification baselines against the proposed Hybrid Attention model."
+}

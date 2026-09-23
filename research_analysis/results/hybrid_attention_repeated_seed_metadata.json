@@ -1,0 +1,43 @@
+{
+  "experiment": "repeated_seed_multi_dataset_hybrid_attention",
+  "split_seed": 42,
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "total_runs": 25,
+  "batch_size": 32,
+  "epochs": 50,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 10,
+  "lr_reduction_patience": 5,
+  "lr_reduction_factor": 0.5,
+  "gradient_clip_norm": 1.0,
+  "embedding_dim": 32,
+  "num_heads": 4,
+  "dropout": 0.1,
+  "device": "cpu",
+  "parameter_count": 9985,
+  "threshold": 0.5,
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling_protocol": "fit_train_only",
+  "training_randomness": "controlled_by_training_seed",
+  "model_initialization": "seed_controlled",
+  "training_dataloader": "shuffle_true_seed_controlled",
+  "validation_dataloader": "shuffle_false",
+  "test_dataloader": "shuffle_false",
+  "model_selection": "minimum_validation_loss",
+  "test_usage": "final_evaluation_only",
+  "repeated_seed_design": "same frozen partitions with independent training seeds"
+}

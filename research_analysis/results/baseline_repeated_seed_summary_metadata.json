@@ -1,0 +1,67 @@
+{
+  "experiment": "repeated_seed_classical_baselines",
+  "input_file": "baseline_repeated_seed_results.csv",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "models": {
+    "logistic_regression": {
+      "max_iter": 2000,
+      "class_weight": null,
+      "random_state": "training_seed"
+    },
+    "random_forest": {
+      "n_estimators": 300,
+      "max_depth": null,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "class_weight": null,
+      "n_jobs": -1,
+      "random_state": "training_seed"
+    },
+    "mlp": {
+      "hidden_layers": [
+        64,
+        32
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.0001,
+      "batch_size": 32,
+      "learning_rate_init": 0.001,
+      "max_iter": 50,
+      "early_stopping": false,
+      "random_state": "training_seed"
+    }
+  },
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split_seed": 42,
+  "total_runs": 75,
+  "aggregation": "mean_and_sample_standard_deviation",
+  "standard_deviation_ddof": 1,
+  "threshold": 0.5,
+  "feature_representation": "21_dimensional_standardized_feature_vector",
+  "scaling_protocol": "fit_train_only",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "test_usage": "final_evaluation_only",
+  "metrics": [
+    "test_roc_auc",
+    "test_pr_auc",
+    "test_accuracy",
+    "test_balanced_accuracy",
+    "test_precision",
+    "test_recall",
+    "test_f1",
+    "test_youden_j"
+  ]
+}

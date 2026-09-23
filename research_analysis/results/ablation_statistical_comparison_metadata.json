@@ -1,0 +1,61 @@
+{
+  "experiment": "paired_ablation_seed_level_statistical_analysis",
+  "reference_variant": "A0_full_hybrid_attention",
+  "ablation_variants": [
+    "A1_no_self_attention",
+    "A2_no_semantic_tokenization",
+    "A3_single_head_attention"
+  ],
+  "ablation_descriptions": {
+    "A1_no_self_attention": "Self-attention removed",
+    "A2_no_semantic_tokenization": "Semantic feature-group tokenization removed",
+    "A3_single_head_attention": "Four attention heads changed to one head"
+  },
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_training_seeds": 5,
+  "split_seed": 42,
+  "primary_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "f1"
+  ],
+  "supplementary_metrics": [
+    "accuracy",
+    "precision",
+    "recall"
+  ],
+  "paired_difference_definition": "ablation minus full Hybrid Attention",
+  "statistical_tests": [
+    "paired Wilcoxon signed-rank test",
+    "exact paired sign-flip permutation test"
+  ],
+  "exact_sign_flip_permutations": "all 2^5 = 32 sign assignments",
+  "effect_size_1": "paired Cohen d",
+  "effect_size_2": "paired rank-biserial correlation",
+  "confidence_interval": "95 percent Student-t confidence interval for the mean paired difference",
+  "multiple_comparison_correction": "Holm-Bonferroni adjustment separately within each metric across 15 dataset-ablation comparisons",
+  "comparisons_per_metric": 15,
+  "alpha": 0.05,
+  "pairing": "same dataset and corresponding training seed between A0 and each ablation",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling_protocol": "fit_train_only",
+  "threshold_protocol": "fixed threshold 0.50",
+  "test_usage": "final evaluation results only; no threshold tuning or model selection performed using these ablation comparisons",
+  "inference_unit": "five paired training-seed observations per dataset-ablation comparison",
+  "important_limitation": "Only five paired training seeds are available per comparison. Exact permutation p-values, confidence intervals, and effect sizes should therefore be interpreted conservatively.",
+  "zero_f1_interpretation": "Zero F1 is retained as an observed fixed-threshold result and is not treated as a missing value or analysis failure.",
+  "output_rows": 90
+}

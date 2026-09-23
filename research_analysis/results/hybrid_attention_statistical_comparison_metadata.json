@@ -1,0 +1,45 @@
+{
+  "experiment": "seed_level_statistical_comparison",
+  "datasets": [
+    "CM1",
+    "JM1",
+    "KC1",
+    "KC2",
+    "PC1"
+  ],
+  "baseline_models": [
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "proposed_model": "hybrid_attention",
+  "training_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_training_seeds": 5,
+  "split_seed": 42,
+  "pairing": "same dataset and corresponding training seed across models",
+  "split_protocol": "frozen_grouped_feature_split_seed42",
+  "scaling_protocol": "fit_train_only",
+  "test_usage": "final_evaluation_only",
+  "primary_metrics": [
+    "roc_auc",
+    "pr_auc",
+    "f1"
+  ],
+  "supplementary_metrics": [
+    "accuracy",
+    "precision",
+    "recall"
+  ],
+  "primary_statistical_test": "paired Wilcoxon signed-rank test",
+  "secondary_exact_test": "exact paired sign-flip permutation test using all 2^5 sign assignments",
+  "effect_size": "paired rank-biserial correlation",
+  "multiple_comparison_correction": "Holm-Bonferroni adjustment separately within each metric across 15 dataset-baseline comparisons",
+  "alpha": 0.05,
+  "note": "Statistical inference uses the five seed-level observations per paired dataset/model comparison, not aggregated means or standard deviations."
+}
